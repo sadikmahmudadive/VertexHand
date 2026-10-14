@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VertexHand — Custom Software, Shaped by Hand</title>
+<meta name="description" content="VertexHand builds custom Android & iOS apps, websites, e-commerce, ERP, CRM, POS, HRM and management systems, IoT & embedded solutions — plus hosting and domains." />
+<meta name="theme-color" content="#000000" />
+<link rel="icon" type="image/png" href="./assets/vertexhand-white.png" />
+<link rel="apple-touch-icon" href="./assets/vertexhand-white.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<div id="loader">
+  <img class="logo" src="./assets/vertexhand-white.png" alt="" width="64" height="64" />
+  <div class="mark">VertexHand</div>
+  <div class="bar"><i id="loadbar"></i></div>
+</div>
+
+<nav id="brandnav">
+  <a class="brand" href="#top" aria-label="VertexHand home">
+    <img src="./assets/vertexhand-white.png" alt="" width="30" height="30" />
+    <span>VertexHand</span>
+  </a>
+  <div class="links">
+    <a href="#services">Services</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#stack">Stack</a><a href="#hosting">Hosting</a>
+  </div>
+  <a class="navcta" href="#contact">Start a project</a>
+</nav>
+
+<!-- the universe: one fixed 3D layer behind the film AND the brand page -->
+<canvas id="scene"></canvas>
+<div id="vignette"></div>
+
+<!-- ═══════════════ the film ═══════════════ -->
+<div id="track">
+  <div id="top"></div>
+  <div id="stage">
+    <div id="labels" aria-hidden="true"></div>
+
+    <div class="caption cap-bottom hero" data-in="-0.06" data-hold="0" data-out="0.055">
+      <p class="kicker">Custom software studio</p>
+      <h1>Software,<br /><span class="accent">shaped by hand.</span></h1>
+      <p>Apps, platforms and systems — engineered from the first vertex to the final pixel.</p>
+    </div>
+
+    <div class="caption cap-left" data-in="0.08" data-hold="0.135" data-out="0.195">
+      <p class="kicker">01 — Mobile</p>
+      <h2>Android. iOS.<br /><span class="accent">One craft.</span></h2>
+      <p>Custom mobile apps in Flutter and Java — fast, fluid, and ready for both stores.</p>
+    </div>
+
+    <div class="caption cap-right" data-in="0.22" data-hold="0.275" data-out="0.335">
+      <p class="kicker">02 — Web &amp; Commerce</p>
+      <h2>Websites that<br /><span class="accent">sell while you sleep.</span></h2>
+      <p>Brand sites and full e-commerce — catalogue, cart, checkout — on React, Next.js and Vite.</p>
+    </div>
+
+    <div class="caption cap-left" data-in="0.36" data-hold="0.415" data-out="0.475">
+      <p class="kicker">03 — Business Systems</p>
+      <h2>Every department.<br /><span class="accent">One system.</span></h2>
+      <p>ERP, CRM, POS, HRM and management systems — built around how your business actually runs.</p>
+    </div>
+
+    <div class="caption cap-right" data-in="0.50" data-hold="0.555" data-out="0.615">
+      <p class="kicker">04 — IoT &amp; Embedded</p>
+      <h2>Software that<br /><span class="accent">touches the world.</span></h2>
+      <p>Firmware, sensors and connected devices — wired to dashboards you can trust.</p>
+    </div>
+
+    <div class="caption cap-left" data-in="0.64" data-hold="0.695" data-out="0.755">
+      <p class="kicker">05 — Technology</p>
+      <h2>A stack chosen,<br /><span class="accent">not inherited.</span></h2>
+      <p>Python, Java, Flutter, Firebase, Cloudflare, Node.js, React, Next.js and Vite.</p>
+    </div>
+
+    <div class="caption cap-right" data-in="0.78" data-hold="0.835" data-out="0.895">
+      <p class="kicker">06 — Hosting &amp; Domains</p>
+      <h2>Launched. Hosted.<br /><span class="accent">Looked after.</span></h2>
+      <p>Domains, SSL, Cloudflare DNS and managed hosting — we keep it running after launch day.</p>
+    </div>
+
+    <div class="caption cap-bottom final" data-in="0.93" data-hold="0.985" data-out="1.1">
+      <h1>Let's build <span class="accent">yours.</span></h1>
+      <p>Tell us what you need. We'll shape the rest.</p>
+      <div class="ctas">
+        <a class="cta solid" href="#contact">Start a project</a>
+        <a class="cta" href="#services">Explore services</a>
+      </div>
+    </div>
+
+    <ol id="rail" aria-hidden="true">
+      <li><span>Intro</span></li><li><span>Mobile</span></li><li><span>Web</span></li><li><span>Systems</span></li>
+      <li><span>IoT</span></li><li><span>Stack</span></li><li><span>Hosting</span></li><li><span>Build</span></li>
+    </ol>
+
+    <div id="scroll-cue">Scroll</div>
+  </div>
+</div>
+
+<!-- ═══════════════ the brand page ═══════════════ -->
+<main>
+
+<section class="bp bp-manifesto" id="about">
+  <div data-reveal>
+    <p class="kicker">VertexHand</p>
+    <h2>No templates.<br /><span class="accent">Just software that fits.</span></h2>
+  </div>
+</section>
+
+<section class="bp">
+  <div class="bp-split">
+    <div data-reveal>
+      <p class="kicker">Why we exist</p>
+      <h2>Built around your business.</h2>
+      <p class="lead">Off-the-shelf software makes you bend your process to fit it. We do the opposite — every app, platform and system starts from how you actually work.</p>
+    </div>
+    <div class="codecard" data-reveal aria-hidden="true">
+      <div class="cc-bar"><i></i><i></i><i></i><span>project.ts</span></div>
+<pre><code><span class="c">// every project starts the same way</span>
+<span class="k">const</span> project = <span class="f">vertexhand</span>.<span class="f">shape</span>({
+  client:   <span class="s">"you"</span>,
+  problem:  <span class="s">"the real one"</span>,
+  platform: [<span class="s">"android"</span>, <span class="s">"ios"</span>, <span class="s">"web"</span>],
+  systems:  [<span class="s">"erp"</span>, <span class="s">"crm"</span>, <span class="s">"pos"</span>],
+  hosting:  <span class="k">true</span>,
+});
+
+<span class="k">await</span> project.<span class="f">launch</span>();  <span class="c">// and we stay</span></code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="bp" id="services">
+  <div class="bp-head" data-reveal>
+    <p class="kicker">Services</p>
+    <h2>Ten ways we build.</h2>
+    <p class="lead">One team for the app, the website, the back office and the device in the field.</p>
+  </div>
+  <div class="svc-grid">
+    <article class="svc" data-reveal>
+      <svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5" /><path d="M10.5 5h3M11 18.5h2" /></svg>
+      <h3>Android &amp; iOS apps</h3><p>Native-feel apps from one Flutter codebase, or native Java where it counts.</p>
+      <div class="tags"><span>Flutter</span><span>Java</span><span>Firebase</span></div>
+    </article>
+    <article class="svc" data-reveal>
+      <svg viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="2" /><path d="M2.5 8.5h19M5.5 6.25h.01M7.5 6.25h.01M6 12h7M6 15h4" /></svg>
+      <h3>Websites</h3><p>Fast, search-friendly brand and company sites that load before the visitor blinks.</p>
+      <div class="tags"><span>Next.js</span><span>React</span><span>Vite</span></div>
+    </article>
+    <article class="svc" data-reveal>
+      <svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 11h10.6L20.5 7.5H7" /><circle cx="9" cy="19" r="1.5" /><circle cx="17" cy="19" r="1.5" /></svg>
+      <h3>E-commerce</h3><p>Storefronts with catalogue, cart, checkout and inventory that stays in sync.</p>
+      <div class="tags"><span>Next.js</span><span>Node.js</span></div>
+    </article>
+    <article class="svc" data-reveal>
+      <svg viewBox="0 0 24 24"><path d="m12 3 9 4.5-9 4.5-9-4.5Z" /><path d="m3 12 9 4.5 9-4.5M3 16.5 12 21l9-4.5" /></svg>
+      <h3>ERP systems</h3><p>Finance, inventory, purchasing and production — finally talking to each other.</p>
+      <div class="tags"><span>Python</span><span>Java</span></div>
+    </article>
+    <article class="svc" data-reveal>
+      <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5" /><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14.8c1.6.8 2.6 2.5 3 5.2" /></svg>
+      <h3>CRM systems</h3><p>Every lead, deal and customer conversation in one place your team will actually use.</p>
+      <div class="tags"><span>React</span><span>Node.js</span></div>
+    </article>
+    <article class="svc" data-reveal>
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="12" rx="2" /><path d="M7 19h10M12 15v4M7 7.5h4M7 10.5h7" /></svg>
+      <h3>POS systems</h3><p>Quick, reliable checkout for shops and restaurants — with stock and sales live.</p>
+      <div class="tags"><span>Flutter</span><span>Firebase</span></div>
+    </article>
+    <article class="svc" data-reveal>
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5" /><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5" /><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5" /><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5" /></svg>
+      <h3>Management systems</h3><p>School, clinic, property, fleet — custom systems for the way your operation runs.</p>
+      <div class="tags"><span>Python</span><span>React</span></div>
+    </article>
+    <article class="svc" data-reveal>
+      <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2" /><circle cx="12" cy="10" r="2.75" /><path d="M7.5 17.5c.8-2 2.4-3 4.5-3s3.7 1 4.5 3" /></svg>
+      <h3>HRM systems</h3><p>Attendance, payroll, leave and performance — handled without the spreadsheets.</p>
+      <div class="tags"><span>Java</span><span>React</span></div>
+    </article>
+    <article class="svc" data-reveal>
+      <svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5" /><path d="M9.5 3v4M14.5 3v4M9.5 17v4M14.5 17v4M3 9.5h4M3 14.5h4M17 9.5h4M17 14.5h4" /></svg>
+      <h3>IoT &amp; embedded</h3><p>Firmware, sensors and gateways connected to clean, real-time dashboards.</p>
+      <div class="tags"><span>Python</span><span>Node.js</span></div>
+    </article>
+    <article class="svc" data-reveal>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.6 3.7 5.6 3.7 9s-1.2 6.4-3.7 9c-2.5-2.6-3.7-5.6-3.7-9S9.5 5.6 12 3Z" /></svg>
+      <h3>Hosting &amp; domains</h3><p>Domain registration, SSL, DNS and managed hosting — one bill, one team.</p>
+      <div class="tags"><span>Cloudflare</span><span>Firebase</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="bp">
+  <div class="bp-split flip">
+    <div data-reveal>
+      <p class="kicker">Craft — 01</p>
+      <h2>One codebase.<br />Two stores.</h2>
+      <p class="lead">We build mobile apps in Flutter so Android and iOS ship together, look identical and cost you one build instead of two. Firebase handles sign-in, data and push.</p>
+    </div>
+    <div class="mock-phone" data-reveal aria-hidden="true">
+      <div class="mp-notch"></div>
+      <div class="mp-head"><span>Good morning</span><b>Orders today</b><strong>128</strong></div>
+      <div class="mp-chart"><i style="--h:40%"></i><i style="--h:65%"></i><i style="--h:52%"></i><i style="--h:80%"></i><i style="--h:70%"></i><i style="--h:95%"></i><i style="--h:60%"></i></div>
+      <div class="mp-row"><i></i><span></span><em></em></div>
+      <div class="mp-row"><i></i><span></span><em></em></div>
+      <div class="mp-row"><i></i><span></span><em></em></div>
+      <div class="mp-tab"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="bp">
+  <div class="bp-split">
+    <div data-reveal>
+      <p class="kicker">Craft — 02</p>
+      <h2>Your operation,<br />on one screen.</h2>
+      <p class="lead">Sales from the POS, stock from the warehouse, people from HR — one dashboard, one source of truth. Built to your workflow, not a vendor's.</p>
+    </div>
+    <div class="mock-dash" data-reveal aria-hidden="true">
+      <aside><b></b><i class="on"></i><i></i><i></i><i></i><i></i></aside>
+      <div class="md-main">
+        <div class="md-kpis">
+          <div><span>Revenue</span><strong>↑ 18%</strong></div>
+          <div><span>Orders</span><strong>2,341</strong></div>
+          <div><span>Staff</span><strong>64</strong></div>
+        </div>
+        <svg class="md-line" viewBox="0 0 300 90" preserveAspectRatio="none"><path d="M0 70 C30 64 45 40 75 45 S120 72 150 50 S200 18 230 26 S275 12 300 8" /><path class="area" d="M0 70 C30 64 45 40 75 45 S120 72 150 50 S200 18 230 26 S275 12 300 8 V90 H0Z" /></svg>
+        <div class="md-rows"><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bp">
+  <div class="bp-stats">
+    <div data-reveal><div class="num">10</div><div class="lbl">Service lines</div></div>
+    <div data-reveal><div class="num">9</div><div class="lbl">Core technologies</div></div>
+    <div data-reveal><div class="num">2<span>in</span>1</div><div class="lbl">Android + iOS, one codebase</div></div>
+    <div data-reveal><div class="num">24/7</div><div class="lbl">Hosting support</div></div>
+  </div>
+</section>
+
+<section class="bp" id="projects">
+  <div class="bp-head" data-reveal>
+    <p class="kicker">Projects</p>
+    <h2>Built, shipped, running.</h2>
+    <p class="lead">Live products we've designed, built and shipped. Pick one for the details.</p>
+  </div>
+  <div class="proj-filters" id="projFilters" data-reveal role="group" aria-label="Filter projects"></div>
+  <div class="proj-grid" id="projGrid"></div>
+</section>
+
+<dialog id="projModal" aria-label="Project details"></dialog>
+
+<section class="bp" id="process">
+  <div class="bp-head" data-reveal>
+    <p class="kicker">Process</p>
+    <h2>From idea to always-on.</h2>
+  </div>
+  <ol class="steps">
+    <li data-reveal><span class="n">01</span><h3>Discover</h3><p>We map your workflow, users and goals before a line of code.</p></li>
+    <li data-reveal><span class="n">02</span><h3>Design</h3><p>Flows and interfaces you can click through and approve.</p></li>
+    <li data-reveal><span class="n">03</span><h3>Build</h3><p>Short sprints, working demos, no surprises at the end.</p></li>
+    <li data-reveal><span class="n">04</span><h3>Launch</h3><p>Store releases, domains, SSL and hosting — handled.</p></li>
+    <li data-reveal><span class="n">05</span><h3>Support</h3><p>Monitoring, updates and new features as you grow.</p></li>
+  </ol>
+</section>
+
+<section class="bp bp-specs" id="stack">
+  <div data-reveal>
+    <p class="kicker center">Technology</p>
+    <h2 class="center">The stack, and why.</h2>
+    <table>
+      <tr><td>Python</td><td>Back-ends, data processing, automation, IoT services</td></tr>
+      <tr><td>Java</td><td>Enterprise systems and native Android</td></tr>
+      <tr><td>Flutter</td><td>Cross-platform Android &amp; iOS apps, POS terminals</td></tr>
+      <tr><td>Firebase</td><td>Auth, realtime data, push notifications, analytics</td></tr>
+      <tr><td>Cloudflare</td><td>DNS, CDN, SSL and protection at the edge</td></tr>
+      <tr><td>Node.js</td><td>APIs, realtime services, integrations</td></tr>
+      <tr><td>React</td><td>Dashboards and admin interfaces</td></tr>
+      <tr><td>Next.js</td><td>Search-friendly websites and e-commerce</td></tr>
+      <tr><td>Vite</td><td>Fast front-end builds — including this site</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="bp" id="hosting">
+  <div class="bp-split flip">
+    <div data-reveal>
+      <p class="kicker">Hosting &amp; Domains</p>
+      <h2>We stay<br />after launch.</h2>
+      <p class="lead">Your domain, your hosting and your software live with the team that built them — so when something needs fixing, there's one number to call.</p>
+      <ul class="checks">
+        <li>Domain registration &amp; renewal</li>
+        <li>SSL certificates, always valid</li>
+        <li>Cloudflare DNS &amp; CDN</li>
+        <li>Managed hosting &amp; backups</li>
+        <li>Monitoring &amp; maintenance</li>
+      </ul>
+    </div>
+    <div class="statuscard" data-reveal aria-hidden="true">
+      <div class="sc-top"><span class="dot"></span>yourbrand.com<em>Online</em></div>
+      <div class="sc-row"><span>SSL certificate</span><b>Valid</b></div>
+      <div class="sc-row"><span>DNS</span><b>Cloudflare</b></div>
+      <div class="sc-row"><span>CDN</span><b>Active</b></div>
+      <div class="sc-row"><span>Last backup</span><b>Today</b></div>
+      <div class="sc-row"><span>Domain renewal</span><b>Auto</b></div>
+      <div class="sc-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="bp bp-quote">
+  <div data-reveal>
+    <blockquote>"The best software is the kind you stop thinking about."</blockquote>
+    <cite>The VertexHand principle</cite>
+  </div>
+</section>
+
+<section class="bp bp-ctaband" id="contact">
+  <div data-reveal>
+    <p class="kicker center">Start a project</p>
+    <h2>Have an idea?<br /><span class="accent">Let's give it shape.</span></h2>
+    <p class="lead center">Tell us about your app, website or system. We'll reply with a plan, a timeline and an honest price.</p>
+    <div class="ctas">
+      <a class="cta solid" href="mailto:hello@vertexhand.com?subject=New%20project">hello@vertexhand.com</a>
+      <a class="cta" href="#services">See services</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="bp-footer">
+  <div class="cols">
+    <div>
+      <a class="brand" href="#top"><img src="./assets/vertexhand-white.png" alt="" width="30" height="30" /><span>VertexHand</span></a>
+      <p class="lead small">Custom apps, websites, business systems and IoT — with hosting and domains handled.</p>
+    </div>
+    <div><h4>Services</h4><a href="#services">Mobile apps</a><a href="#services">Websites &amp; e-commerce</a><a href="#services">ERP · CRM · POS · HRM</a><a href="#services">IoT &amp; embedded</a></div>
+    <div><h4>Company</h4><a href="#about">About</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#stack">Technology</a><a href="#contact">Contact</a></div>
+    <div><h4>Support</h4><a href="#hosting">Hosting</a><a href="#hosting">Domains</a><a href="#hosting">Maintenance</a><a href="mailto:hello@vertexhand.com">Email us</a></div>
+  </div>
+  <p class="fine">© <span id="year">2026</span> VertexHand. All rights reserved.</p>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
