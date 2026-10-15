@@ -2,7 +2,7 @@
 
 Website for **VertexHand** — custom Android & iOS apps, websites, e-commerce, ERP / CRM / POS / HRM / management systems, IoT & embedded, plus hosting and domains.
 
-A scroll-driven 3D experience built with [three.js](https://threejs.org/) and [Vite](https://vitejs.dev/): scrolling flies a camera through a universe of particle objects (one per service), then carries on beneath the brand page, where every block dives in from the deep.
+A scroll-driven 3D website built with [three.js](https://threejs.org/) and [Vite](https://vitejs.dev/). One fixed 3D "clay" tech city sits behind the hero and a pinned five-step process: scrolling glides the camera from the city overview through Discover, Design, Build, Launch and Support, with a radar pulse, a tile light-wave, tiles growing into a skyline, light beams and an orbit ring. White content sections follow (what we build, projects, technology, FAQ, contact).
 
 ## Run
 
@@ -17,13 +17,13 @@ npm run preview  # serve the production build
 
 | Path | What |
 |---|---|
-| `index.html` | Page content: film captions + brand page sections |
-| `src/main.js` | three.js scene, camera flight, captions, labels |
-| `src/shapes.js` | The 8 particle objects (logo, phone, browser, systems, chip, stack, globe) |
-| `src/brand.js` | Scroll-driven "dive" transforms for every page block |
-| `src/projects.js` | **Project showcase data** — edit the `PROJECTS` array to add/change projects |
-| `src/style.css` | All styling |
-| `public/assets/` | Logo and project screenshots |
+| `index.html` | All page content: hero, process steps, content sections, FAQ |
+| `src/scene.js` | The 3D diorama, camera stations and scroll-driven animation |
+| `src/main.js` | Entry: smooth scrolling (Lenis) |
+| `src/brand.js` | One-shot reveals, nav state, FAQ accordion |
+| `src/projects.js` | **Project showcase data** — edit the `PROJECTS` array |
+| `src/style.css` | All styling (light theme) |
+| `public/assets/` | Logos (white + dark) and project screenshots |
 
 To add a project: copy an entry in `src/projects.js`, then put its screenshot in `public/assets/projects/` and set `image`.
 
